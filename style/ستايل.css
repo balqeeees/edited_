@@ -1,0 +1,167 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Playpen Sans Arabic", cursive;
+  background-color: #e9e3de;
+  color: #333;
+  direction: rtl;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #eea86f, #f6d5a7);
+  border-radius: 5px;
+}
+
+.header .left .logo {
+  width: 120px;
+  height: auto;
+}
+
+.center {
+  display: flex;
+  gap: 40px; /* تباعد أكبر بين الروابط */
+  align-items: center;
+}
+
+.center a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 1.4rem;
+  position: relative;
+  padding: 5px 10px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+/* Active underline */
+.center a.active::after,
+.center a:hover::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #4a3426;
+  border-radius: 2px;
+  margin-top: 4px;
+  transition: width 0.3s ease;
+}
+
+/* Hover background for links */
+.center a:hover {
+  background-color: rgba(255, 165, 0, 0.2);
+}
+
+/* Icons */
+.icon {
+  display: flex;
+  gap: 15px;
+  font-size: 1.8rem;
+}
+
+.icon i {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.icon i:hover {
+  transform: scale(1.2);
+}
+
+.header .fa-facebook { color: #1877f2; }
+.header .fa-square-instagram { color: #e4405f; }
+.header .fa-whatsapp { color: #25d366; }
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px; /* تقليل المسافة بين الصورة والفقرات */
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  margin: 15px 20px;
+  padding: 20px;
+  background-color: #fff4e6;
+}
+
+.hero .image img {
+  width: 35%; /* تقليل عرض الصورة لتقريب الفقرات */
+  max-width: 100%;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hero .image img:hover {
+  transform: scale(1.05);
+  border: 4px solid #eea86f;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.hero .para {
+  max-width: 60%; /* الفقرة تأخذ باقي المساحة */
+  text-align: right;
+}
+
+.hero .para h1 {
+  font-size: 2rem;
+  color: #4a3426;
+  margin-bottom: 10px;
+}
+
+.hero .para p {
+  font-size: 1.1rem;
+  color: #6b4f3a;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.hero .para .cta-btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: #4a3426;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.hero .para .cta-btn:hover {
+  background-color: #eea86f;
+  transform: scale(1.05);
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .center {
+    gap: 25px;
+  }
+
+  .hero .image img {
+    width: 40%;
+  }
+
+  .hero .para {
+    max-width: 55%;
+  }
+}
+
+
+
+   

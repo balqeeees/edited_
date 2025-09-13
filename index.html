@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الصفحة الرئيسية | BaytiBites</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="right">
+        <img src="./img/logo.png" alt="BaytiBites Logo" class="logo" />
+      </div>
+
+      <nav class="center">
+        <a href="index.html" class="active">الرئيسية</a>
+        <a href="categories.html">الأصناف</a>
+        <a href="aboutUs.html">من نحن</a>
+        <a href="contactUs.html">تواصل معنا</a>
+      </nav>
+
+      <div class="icon">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-square-instagram"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+      </div>
+
+      <div class="burger"><i class="fa-solid fa-bars"></i></div>
+    </header>
+
+    <section class="hero">
+      <div class="carousel">
+        <img src="./img/foood1.jpg" alt="طبق منزلي" class="active" />
+        <img src="./img/foood2.jpg" alt="طبق منزلي" />
+        <img src="./img/foood3.jpg" alt="طبق منزلي" />
+        <img src="./img/foood4.jpg" alt="طبق منزلي" />
+        <img src="./img/food5.jpg" alt="طبق منزلي" />
+      </div>
+      <div class="overlay"></div>
+
+      <div class="hero-text">
+        <h1>BaytiBites</h1>
+        <p>لأن أكل البيت ما بيتعوض، وفرنا لكم منصة تبيعوا وتشترو أكل منزلي بسهولة.</p>
+        <div class="reg">
+          <button class="sign signup-btn">
+            <i class="fa-solid fa-user-plus"></i> سجل معنا
+          </button>
+          <button class="sign login-btn">
+            <i class="fa-solid fa-right-to-bracket"></i> تسجيل الدخول
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="about container">
+      <h2>من نحن</h2>
+      <p>
+        BaytiBites هي منصة محلية بتقرب بين عشاق الأكل المنزلي وصانعيه. هدفنا نوفر
+        تجربة طعام أصيلة ومميزة، تدعم المواهب وتجمع الناس حول مائدة واحدة.
+      </p>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> BaytiBites. جميع الحقوق محفوظة.</p>
+      </div>
+    </footer>
+
+    <script src="./style/main.js"></script>
+  </body>
+</html>

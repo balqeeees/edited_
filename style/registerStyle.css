@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    background-color: #FFF8E7;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.left-panel {
+    flex: 1;
+    background: #A3C9A8;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    text-align: center;
+}
+
+.left-panel h1 {
+    color: #FFF8E7;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.left-panel p {
+    color: #FFF8E7;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.left-panel img {
+    max-width: 80%;
+}
+
+.right-panel {
+    flex: 1;
+    background: #FFF8E7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.right-panel form {
+    width: 100%;
+    max-width: 400px;
+}
+
+.right-panel h2 {
+    color: #D94F30;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: #885E3C;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #A3C9A8;
+    outline: none;
+    font-family: 'Cairo', sans-serif;
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #F4A261;
+    box-shadow: 0 0 5px #F4A261;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #D94F30;
+    color: #FFF8E7;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #F4A261;
+}
+
+.switch-text {
+    margin-top: 15px;
+    text-align: center;
+    color: #885E3C;
+}
+
+.switch-text a {
+    color: #D94F30;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.switch-text a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-panel,
+    .right-panel {
+        flex: none;
+        width: 100%;
+        padding: 30px;
+    }
+
+    .left-panel img {
+        max-width: 60%;
+        margin-top: 20px;
+    }
+}

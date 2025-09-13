@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>من نحن | BaytiBites</title>
+
+  <!-- خط كايرو -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- ملف التنسيقات -->
+  <link rel="stylesheet" href="./style/aboutUs.css" />
+</head>
+<body>
+  <!-- الهيدر -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <ul class="nav-links left-nav">
+          <li><a href="./index.html">الرئيسية</a></li>
+          <li><a href="./about.html" class="active">من نحن</a></li>
+          <li><a href="./contact.html">تواصل معنا</a></li>
+        </ul>
+
+        <div class="brand-wrapper">
+          <a class="brand" href="#">BaytiBites</a>
+          <p class="tagline">نكهات بيتية بكل حب</p>
+        </div>
+      </nav>
+
+      <div class="hero">
+        <h1>من نحن</h1>
+        <p>
+          نحن في BaytiBites نسعى لتقديم أطباق منزلية أصيلة بجودة عالية وطابع دافئ. هدفنا أن نجعل كل وجبة تجربة مليئة بالحب والاهتمام.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- المحتوى الرئيسي -->
+  <main class="container">
+    <section class="card">
+      <h2>رؤيتنا</h2>
+      <p>
+        أن نكون الوجهة الأولى لكل من يبحث عن طعام منزلي لذيذ وصحي يقدم بابتسامة صادقة.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>مهمتنا</h2>
+      <p>
+        تقديم تجربة طعام مميزة تحافظ على جودة المكونات وتنقل نكهة الأطباق التقليدية.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>قيمنا</h2>
+      <ul>
+        <li>الجودة أولًا</li>
+        <li>الشفافية والمصداقية</li>
+        <li>حب ما نقوم به</li>
+        <li>الابتكار مع الحفاظ على التراث</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- الفوتر -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> BaytiBites. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script><section class="hero">
+  <div class="carousel-container">
+    <div class="carousel">
+      <img src="./img/food1.jpg" alt="food1" class="active" loading="lazy" />
+      <img src="./img/food2.jpg" alt="food2" loading="lazy" />
+      <img src="./img/food3.jpg" alt="food3" loading="lazy" />
+    </div>
+
+    <!-- Carousel Controls -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+
+    <!-- Dots Navigation -->
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <!-- Overlay & Text -->
+    <div class="overlay"></div>
+    <div class="hero-text">
+      <h1>BaytiBites</h1>
+      <p>اكل البيت ما بيتعوض لهيك سهلنا عليكم تبيعو او تشترو اكل من البيت</p>
+      <div class="reg">
+        <p>سجل و استمتع او بيع وجيب دخل</p>
+        <button class="sign" onclick="window.location.href='./signup.html'">
+          سجل معنا <i class="fa-solid fa-user-plus"></i>
+        </button>
+        <button class="sign" onclick="window.location.href='./login.html'">
+          تسجيل الدخول <i class="fa-solid fa-right-to-bracket"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Decorative food icons -->
+    <img src="./img/icon1.png" class="food-icon icon1" alt="" />
+    <img src="./img/icon2.png" class="food-icon icon2" alt="" />
+  </div>
+</section>
+
+<!-- JS directly in HTML -->
+<script>
+  const slides = document.querySelectorAll(".carousel img");
+  const dots = document.querySelectorAll(".dot");
+  let current = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === index);
+      dots[i].classList.toggle("active", i === index);
+    });
+    current = index;
+  }
+
+  function nextSlide() {
+    showSlide((current + 1) % slides.length);
+  }
+
+  function prevSlide() {
+    showSlide((current - 1 + slides.length) % slides.length);
+  }
+
+  document.querySelector(".next").addEventListener("click", nextSlide);
+  document.querySelector(".prev").addEventListener("click", prevSlide);
+  dots.forEach((dot, i) => dot.addEventListener("click", () => showSlide(i)));
+
+  setInterval(nextSlide, 4000);
+</script>
+
+</body>
+</html>

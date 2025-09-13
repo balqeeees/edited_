@@ -1,0 +1,135 @@
+/* ====== Base & Colors ====== */
+:root {
+    --cream: #FFF8E7;
+    --rust: #D94F30;
+    --mint: #A3C9A8;
+    --brown: #885E3C;
+    --orange: #F4A261;
+    --text: #4a3b2f;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: "Cairo", system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+    direction: rtl;
+    text-align: right;
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin-inline: auto
+}
+
+/* ====== Header ====== */
+.site-header {
+    background: radial-gradient(1200px 300px at 10% -30%, rgba(163, 201, 168, .35), transparent 60%),
+        linear-gradient(135deg, rgba(217, 79, 48, .12), rgba(244, 162, 97, .08));
+    padding-bottom: 2rem;
+    border-bottom: 3px solid rgba(244, 162, 97, .35);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding: 1rem 0 .5rem;
+}
+
+.brand-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start
+}
+
+.brand {
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--brown);
+    text-decoration: none;
+    line-height: 1.2
+}
+
+.tagline {
+    margin: .15rem 0 0;
+    font-size: 1rem;
+    color: var(--rust);
+    font-weight: 600
+}
+
+.nav-links {
+    display: flex;
+    gap: .75rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links.left-nav {
+    order: -1;
+    flex-direction: row
+}
+
+.nav-links a {
+    padding: .55rem .95rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--brown)
+}
+
+.nav-links a:hover {
+    background: rgba(163, 201, 168, .25)
+}
+
+.nav-links a.active {
+    background: var(--mint);
+    color: #214a2f
+}
+
+/* ====== Hero ====== */
+.hero {
+    margin-top: 1.25rem
+}
+
+.hero h1 {
+    margin: 0 0 .35rem;
+    color: var(--brown);
+    font-size: clamp(1.9rem, 2.2vw + 1rem, 2.5rem)
+}
+
+.hero p {
+    margin: 0;
+    max-width: 60ch
+}
+
+/* ====== Main cards ====== */
+.card {
+    background: var(--white);
+    border: 1px solid rgba(136, 94, 60, .15);
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(136, 94, 60, .12);
+    padding: 1.25rem;
+    margin: 1rem 0;
+}
+
+/* ====== Footer ====== */
+.site-footer {
+    border-top: 3px solid rgba(163, 201, 168, .35);
+    background: linear-gradient(180deg, rgba(163, 201, 168, .15), transparent);
+    padding: 1.2rem 0 2rem;
+    text-align: center
+}
+
+.site-footer p {
+    margin: 0;
+    color: var(--brown)
+}

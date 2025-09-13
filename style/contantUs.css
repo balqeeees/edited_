@@ -1,0 +1,345 @@
+/* ====== Color System (from your palette) ====== */
+:root {
+    --cream: #FFF8E7;
+    /* base background */
+    --rust: #D94F30;
+    /* primary / buttons */
+    --mint: #A3C9A8;
+    /* accents / highlights */
+    --brown: #885E3C;
+    /* headings / text accents */
+    --orange: #F4A261;
+    /* secondary accents / borders */
+
+    --text: #4a3b2f;
+    /* readable body text */
+    --white: #ffffff;
+}
+
+/* ====== Resets ====== */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Cairo", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.6;
+}
+
+/* ====== Layout helpers ====== */
+.container {
+    width: min(1100px, 92%);
+    margin-inline: auto;
+}
+
+/* ====== Header / Hero ====== */
+.site-header {
+    background:
+        radial-gradient(1200px 300px at 10% -30%, rgba(163, 201, 168, .35), transparent 60%),
+        linear-gradient(135deg, rgba(217, 79, 48, .12), rgba(244, 162, 97, .08));
+    padding-bottom: 2.5rem;
+    border-bottom: 3px solid rgba(244, 162, 97, .35);
+}
+
+
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0 .5rem;
+}
+
+.brand {
+    font-weight: 700;
+    font-size: 1.35rem;
+    color: var(--brown);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: .75rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    padding: .55rem .9rem;
+    border-radius: 999px;
+    text-decoration: none;
+    color: var(--brown);
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    background: rgba(163, 201, 168, .25);
+}
+
+.nav-links a.active {
+    background: var(--mint);
+    color: #214a2f;
+}
+
+.hero {
+    padding: 2rem 0 0;
+    text-align: left;
+}
+
+.hero h1 {
+    margin: 0 0 .4rem 0;
+    font-size: clamp(1.8rem, 2.5vw + 1rem, 2.6rem);
+    color: var(--brown);
+}
+
+.hero p {
+    margin: 0;
+    max-width: 60ch;
+}
+
+/* ====== Cards ====== */
+.card {
+    background: var(--white);
+    border: 1px solid rgba(136, 94, 60, .15);
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(136, 94, 60, .12);
+    padding: 1.25rem;
+}
+
+/* ====== Grid ====== */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1.1fr;
+    gap: 1.25rem;
+    margin: 2rem 0 1.5rem;
+}
+
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ====== Form ====== */
+.contact-form h2,
+.contact-info h2 {
+    margin-top: 0;
+    color: var(--brown);
+    font-size: 1.4rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .9rem;
+}
+
+@media (max-width: 700px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.input-group {
+    display: grid;
+    gap: .35rem;
+}
+
+.input-group label {
+    font-weight: 700;
+    color: var(--brown);
+    font-size: .95rem;
+}
+
+.input-group label span {
+    color: var(--rust);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: .85rem .95rem;
+    border: 2px solid rgba(136, 94, 60, .18);
+    border-radius: 14px;
+    background: #fff;
+    font: inherit;
+    outline: none;
+    transition: border-color .2s, box-shadow .2s, background .2s;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #9b8a7e;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--mint);
+    box-shadow: 0 0 0 4px rgba(163, 201, 168, .25);
+}
+
+/* invalid hint (simple) */
+input.invalid,
+textarea.invalid {
+    border-color: var(--rust);
+    box-shadow: 0 0 0 4px rgba(217, 79, 48, .18);
+}
+
+.error {
+    display: none;
+    color: var(--rust);
+    font-size: .8rem;
+}
+
+input.invalid+.error,
+textarea.invalid+.error {
+    display: block;
+}
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: .5rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: .85rem 1.15rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--rust);
+    color: #fff;
+    box-shadow: 0 6px 16px rgba(217, 79, 48, .25);
+}
+
+.btn-primary:hover {
+    filter: brightness(1.03);
+    transform: translateY(-1px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--rust);
+    border-color: var(--rust);
+}
+
+.btn-outline:hover {
+    background: rgba(217, 79, 48, .08);
+}
+
+/* ====== Contact Info ====== */
+.contact-info {
+    background:
+        linear-gradient(180deg, rgba(244, 162, 97, .08), transparent 60%),
+        #fff;
+    border-color: rgba(244, 162, 97, .35);
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: .25rem 0 1rem;
+    display: grid;
+    gap: .6rem;
+}
+
+.info-title {
+    display: block;
+    font-weight: 700;
+    color: var(--brown);
+}
+
+.contact-info a {
+    color: var(--rust);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.mini-cta {
+    margin-top: 1rem;
+    padding: .9rem;
+    border: 2px dashed var(--orange);
+    border-radius: 16px;
+    background: rgba(244, 162, 97, .06);
+}
+
+.mini-cta h3 {
+    margin: 0 0 .3rem;
+    color: var(--brown);
+}
+
+/* ====== Map Placeholder ====== */
+.map-section {
+    margin: .25rem 0 3rem;
+    padding: 0;
+    overflow: hidden;
+}
+
+.map-placeholder {
+    height: 300px;
+    display: grid;
+    place-items: center;
+    color: #6d5a4b;
+    background:
+        linear-gradient(135deg, rgba(163, 201, 168, .35), rgba(244, 162, 97, .25)),
+        repeating-linear-gradient(45deg, rgba(136, 94, 60, .08) 0 12px, rgba(136, 94, 60, .03) 12px 24px);
+    border-radius: 18px;
+    border: 1px solid rgba(136, 94, 60, .18);
+}
+
+.map-placeholder p {
+    margin: 0;
+    padding: .4rem .8rem;
+    background: rgba(255, 255, 255, .7);
+    border-radius: 999px;
+    border: 1px solid rgba(136, 94, 60, .2);
+}
+
+/* ====== Footer ====== */
+.site-footer {
+    border-top: 3px solid rgba(163, 201, 168, .35);
+    background: linear-gradient(180deg, rgba(163, 201, 168, .15), transparent);
+    padding: 1.2rem 0 2rem;
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+    color: var(--brown);
+}
+
+.site-footer a {
+    color: var(--rust);
+}
+
+/* ====== Utilities ====== */
+.helper {
+    margin: 0;
+    font-size: .9rem;
+    color: #7a6a5d;
+}

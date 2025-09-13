@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>أصناف الطعام</title>
+
+    <!-- خط كايرو -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- ملف التنسيقات -->
+    <link rel="stylesheet" href="./style/categories.css" />
+    <style>
+        /* تعديل اتجاه العناصر بالهيدر */
+        .nav {
+            flex-direction: row;
+            /* بدل row-reverse */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- الهيدر -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="nav">
+                <div class="brand-wrapper">
+                    <a class="brand" href="#">BaytiBites</a>
+                    <p class="tagline">نكهات بيتية بكل حب</p>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="./index.html">الرئيسية</a></li>
+                    <li><a href="./about.html">من نحن</a></li>
+                    <li><a href="./contantUs.html">تواصل معنا</a></li>
+                    <li><a href="./categories.html" class="active">الأصناف</a></li>
+                </ul>
+            </nav>
+
+            <div class="hero">
+                <h1>أصناف الطعام</h1>
+                <p>اختار من الأصناف التالية لتستكشف أكلاتنا البيتية. فيك تستخدم البحث أو الفلاتر للتصفية بسرعة.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- محتوى الصفحة -->
+    <main class="container">
+        <!-- شريط الأدوات -->
+        <section class="toolbar card">
+            <div class="search-wrap">
+                <label for="search" class="visually-hidden">ابحث عن صنف</label>
+                <input id="search" type="search" placeholder="ابحث عن صنف... (مثلاً: منسف، حلويات، نباتي)" />
+            </div>
+
+            <div class="filters">
+                <button class="chip" data-filter="all">الكل</button>
+                <button class="chip" data-filter="main">رئيسية</button>
+                <button class="chip" data-filter="starters">مقبلات</button>
+                <button class="chip" data-filter="dessert">حلويات</button>
+                <button class="chip" data-filter="bakery">معجنات</button>
+                <button class="chip" data-filter="salad">سلطات</button>
+                <button class="chip" data-filter="breakfast">فطور</button>
+                <button class="chip" data-filter="soup">شوربات</button>
+                <button class="chip" data-filter="healthy">صحي</button>
+                <button class="chip" data-filter="vegan">نباتي</button>
+                <button class="chip" data-filter="glutenfree">بدون جلوتين</button>
+                <button class="chip" data-filter="drinks">مشروبات</button>
+            </div>
+        </section>
+
+        <!-- شبكة الأصناف -->
+        <section class="grid">
+            <a href="#" class="category card" data-group="main" data-tags="رئيسية لحوم رز منسف أردني عربي">
+                <div class="icon">🍗</div>
+                <h3>مأكولات رئيسية</h3>
+                <p>أطباق دسمة وشبعانة مثل المنسف، المقلوبة، والمحاشي.</p>
+            </a>
+
+            <a href="#" class="category card" data-group="starters" data-tags="مقبلات فواتح شهية حمص متبل">
+                <div class="icon">🥙</div>
+                <h3>مقبلات</h3>
+                <p>فواتح شهية بيتية: حمص، متبل، ورق عنب، وبطاطا ودجز.</p>
+            </a>
+
+            <a href="#" class="category card" data-group="dessert" data-tags="حلويات كيك بقلاوة كنافة حلو">
+                <div class="icon">🍰</div>
+                <h3>حلويات</h3>
+                <p>كيكات ومعمول وبقلاوة وكنافة بنكهة بيتية أصيلة.</p>
+            </a>
+
+            <a href="#" class="category card" data-group="bakery" data-tags="معجنات فطائر خبز بيتزا زعتر جبنة">
+                <div class="icon">🥐</div>
+                <h3>معجنات</h3>
+                <p>فطاير بيتية طازجة: زعتر، جبنة، سبانخ، وبيتزا.</p>
+            </a>
+
+            <a href="#" class="category card" data-group="salad" data-tags="سلطات تبولة فتوش خضار صحي">
+                <div class="icon">🥗</div>
+                <h3>سلطات</h3>
+                <p>تبولة، فتوش، وسلطات موسمية طازجة وصحية.</p>
+            </a>
+
+            <a href="#" class="category card" data-group="drinks" data-tags="مشروبات عصائر قهوة شاي">
+                <div class="icon">🥤</div>
+                <h3>مشروبات</h3>
+                <p>عصائر طبيعية ومشروبات باردة وساخنة.</p>
+            </a>
+
+            <a href="#" class="category card" data-group="breakfast" data-tags="فطور بيض أجبان ألبان مسخن">
+                <div class="icon">🍳</div>
+                <h3>فطور</h3>
+                <p>فطور بيتي: بيض، أجبان، لبنة، مسخن رول، وسخانات.</p>
+            </a>
+
+            <a href="#" class="category card" data-group="soup" data-tags="شوربات عدس خضار دجاج">
+                <div class="icon">🥣</div>
+                <h3>شوربات</h3>
+                <p>شوربة عدس، دجاج، وخضار بلمسة دافئة.</p>
+            </a>
+
+            <a href="#" class="category card" data-group="healthy" data-tags="صحي قليل دهون بروتين متوازن">
+                <div class="icon">💪</div>
+                <h3>أكلات صحية</h3>
+                <p>خيارات متوازنة قليلة الدهون وغنية بالبروتين.</p>
+            </a>
+
+            <a href="#" class="category card" data-group="vegan" data-tags="نباتي فيغن بلا منتجات حيوانية">
+                <div class="icon">🌿</div>
+                <h3>نباتي</h3>
+                <p>أطباق نباتية كاملة بلا منتجات حيوانية.</p>
+            </a>
+
+            <a href="#" class="category card" data-group="glutenfree" data-tags="بدون جلوتين حساسيات صحة">
+                <div class="icon">🚫🌾</div>
+                <h3>بدون جلوتين</h3>
+                <p>خيارات مناسبة لحساسية القمح والجلوتين.</p>
+            </a>
+        </section>
+    </main>
+
+    <!-- الفوتر -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>© <span id="year"></span> BaytiBites. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script>
+        // سنة حالية
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // بحث + فلاتر بسيطة (بدون مكتبات)
+        const search = document.getElementById('search');
+        const chips = document.querySelectorAll('.chip');
+        const cards = document.querySelectorAll('.category');
+
+        let activeGroup = 'all';
+
+        function applyFilters() {
+            const q = (search.value || '').trim().toLowerCase();
+            cards.forEach(card => {
+                const group = card.getAttribute('data-group');
+                const tags = (card.getAttribute('data-tags') || '').toLowerCase();
+
+                const matchGroup = (activeGroup === 'all') || (group === activeGroup);
+                const matchText = !q || tags.includes(q);
+                card.style.display = (matchGroup && matchText) ? '' : 'none';
+            });
+        }
+
+        chips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                chips.forEach(c => c.classList.remove('active'));
+                chip.classList.add('active');
+                activeGroup = chip.dataset.filter;
+                applyFilters();
+            });
+        });
+
+        search.addEventListener('input', applyFilters);
+
+        // فعل "الكل" افتراضيًا
+        document.querySelector('.chip[data-filter="all"]').classList.add('active');
+    </script>
+</body>
+
+</html>
